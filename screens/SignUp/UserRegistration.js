@@ -177,7 +177,7 @@ const UserRegistration = (props) => {
             maxHeight={300}
             labelField="name"
             valueField="id"
-            placeholder={nationality != '' ? nationality : 'Country'}
+            placeholder={nationality != undefined ? nationality : 'Country'}
             searchPlaceholder="Search..."
             //value={values.nationality}
             //onFocus={() => setIsFocus(true)}
@@ -226,6 +226,7 @@ const UserRegistration = (props) => {
         )}
         <FormInput
           name="telephone"
+          keyboardType="numeric"
           //value={values.telephone}
           onChangeText={(values) => setTelephone(values)}
           placeholder="Enter telephone number"

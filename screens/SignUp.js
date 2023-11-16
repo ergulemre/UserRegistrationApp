@@ -71,6 +71,7 @@ const SignUp = (props) => {
     try {
       await SecureStore.setItemAsync('birthDate', JSON.stringify(state.birthDate != undefined ? state.birthDate : ''));
       await SecureStore.setItemAsync('city', stateObj.city != undefined ? stateObj.city : '');
+      await SecureStore.setItemAsync('country', stateObj.country != undefined ? stateObj.country : '');
       await SecureStore.setItemAsync('cvName', stateObj.cvName != undefined ? stateObj.cvName : '');
       await SecureStore.setItemAsync('cvPath', stateObj.cvPath != undefined ? stateObj.cvPath : '');
       await SecureStore.setItemAsync(
